@@ -1,0 +1,97 @@
+- Create React App ✔
+- Configure TailwindCSS ✔
+- Header ✔
+- Routing of App ✔
+- Login Form ✔
+- Sign Up Form ✔
+- Form Validation ✔
+- useRef Hook ✔
+- Firebase Setup ✔
+        - window powersell - Set-ExecutionPolicy RemoteSigned 
+        - Set-ExecutionPolicy Restricted
+        - firebase login
+        - firebase init
+        - npm run build
+        - firebase deploy
+- Deploying our app to Production ✔ 
+- Create Signup User Account ✔
+- Implement Sign In user API ✔
+- Created Redux Store with userSlice ✔
+- Implement Sign out ✔
+- Update Profile ✔
+- BugFix: Sign up user displayName and Profile picture update ✔
+- BugFix: If the user is login redirect to Browse page else redirect to login/signup page ✔
+- Unsubscribe to the onAuthStateChange callback ✔
+- Add hardcoded values to the constants file ✔
+- TMDB  
+    - login website ✔
+    - go to edit Profile ✔
+    - then go to API section ✔
+    - Their will API key and API access token before that i have to registered an app over here ✔ 
+    - Go to TMDB home page and on header click more and then go to API then it will redirect to us new page their find out the option API Reference ✔
+    - Get Data from TMDB now playing movies list API ✔
+- Fetch movies data using TMDBs API 
+    - The name of fetch functiion is getNowPlayingMovies ✔
+    - Inside constants file we will create API_OPTIONS variable ✔
+- Custom Hook for Now playing movies ✔
+- Create a movieSlice ✔
+- Update store with movies data ✔
+- Planninfg for MainContainer and secondaryContainer container ✔
+- create MovieTitle component ✔
+- Fetch Data for Trailer video ✔
+- Update Store with Trailer video data ✔
+- Embedded the youtube video and make it autoplay and mute ✔
+- TailwindCSS classes to make Main container look awesome ✔
+- Build secondary Component
+- Build Movie List
+- Build Movie card
+- TMDB Image CDN userSlice
+- Made the Browser page amazing with Tailwind CSS
+- usePopularMovies Custom Hook
+
+
+
+# Features 
+- Login/Sign Up 
+    - SignIn / SignUp Form
+    - Redirect to Browser Page
+- Browser (After Authentication)
+    - Header 
+    - Main Movie Container 
+        - VideoBackground
+        - VideoTitle and Description
+    - secondaryContainer
+        - MoviesList * n
+            - Into it cards * n
+
+// Folder Structure 
+
+- App Component     
+    - Body Component
+        - Pages
+            - Login Component
+            - Browse Component
+        - Components
+            - Body
+            - Header
+            - MainContainer - we have to Implement early return concept inside this component
+            - secondaryContainer
+                - MovieList - Popular 
+                    - MovieCard * n
+                - MovieList - Now playing 
+                    - MovieCard * n
+                - MovieList - Trending 
+                    - MovieCard * n
+                - MovieList - Horror
+                    - MovieCard * n
+
+// Autocomplete Suggestion List Feature Folder Structure
+
+- MainContainer
+    - Header
+        - Textfield
+        - Timer 
+    - Autosuggestion Component 
+        - Row Component
+    - SelectedItemList
+        - Row Component
