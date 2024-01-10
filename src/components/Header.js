@@ -59,13 +59,13 @@ const Header = ({ isSignInForm, setIsSignInForm }) => {
     }
 
     return (
-        <div className="relative z-20 w-full px-8 py-4 bg-gradient-to-b from-black flex justify-between items-center">
+        <div className="absolute z-50 w-full px-8 py-4 bg-gradient-to-b from-black flex justify-between items-center">
             <img className='w-40 h-16 object-cover' src={NETFLIX_LOGO} alt="logo" />
             {
                 user ?
                     <div className='flex items-center'>
                         <img className='w-9 h-9 rounded-sm object-contain' src={user.photoURL} alt="img" />
-                        <button onClick={handleSignOut} className='text-white bg-red-600 font-bold px-3 h-9 rounded-[5px] ml-2'>Sign Out</button>
+                        <button onClick={handleSignOut} className='text-white bg-blue-600 font-bold px-3 h-9 rounded-[5px] ml-2'>Sign Out</button>
                     </div>
                     :
                     !isSignInForm && <button onClick={() => setIsSignInForm(true)} className='text-white bg-red-600 font-bold px-3 h-9 rounded-[5px]'>Sign In</button>

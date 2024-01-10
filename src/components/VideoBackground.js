@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux';
 
 const VideoBackground = ({ movieId }) => {
     const trailerVideo = useSelector((store) => store?.movies?.trailerVideos);
-    console.log(trailerVideo);
+    // console.log(trailerVideo);
     useMoviesTrailer(movieId);
 
     return (
-        <div className='w-full absolute top-0 left-0'>
+        <div className='w-full'>
             <iframe
                 className='w-full aspect-video overflow-x-hidden'
                 src={`https://www.youtube.com/embed/${trailerVideo?.key}/?&autoplay=1&mute=1`}
