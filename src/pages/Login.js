@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react'
 import Header from '../components/Header';
 
 // Constants
-import { USER_IMG } from '../utils/constants';
+import { USER_IMG, BG_IMG } from '../utils/constants';
 
 // Input validation
 import { checkValidData } from '../utils/validate';
@@ -84,7 +84,7 @@ const Login = () => {
         <div className='relative'>
             <Header isSignInForm={isSignInForm} setIsSignInForm={setIsSignInForm} />
             <div className='absolute top-0 left-0 h-screen'>
-                <img className='w-screen aspect-video object-cover' src="https://assets.nflxext.com/ffe/siteui/vlv3/c31c3123-3df7-4359-8b8c-475bd2d9925d/15feb590-3d73-45e9-9e4a-2eb334c83921/IN-en-20231225-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="bg-img" />
+                <img className='w-screen aspect-video object-cover' src={BG_IMG} alt="bg-img" />
             </div>
             <form className='relative top-28 w-4/12 mx-auto text-white bg-black py-15 p-10 rounded-lg bg-opacity-80'>
                 <h1 className='py-8 text-3xl font-semibold'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>

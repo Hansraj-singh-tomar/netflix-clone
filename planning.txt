@@ -2,6 +2,8 @@
 - Configure TailwindCSS ✔
 - Header ✔
 - Routing of App ✔
+
+// Login and SignUp part begin
 - Login Form ✔
 - Sign Up Form ✔
 - Form Validation ✔
@@ -23,6 +25,8 @@
 - BugFix: If the user is login redirect to Browse page else redirect to login/signup page ✔
 - Unsubscribe to the onAuthStateChange callback ✔
 - Add hardcoded values to the constants file ✔
+
+- Home page part begin
 - TMDB  
     - login website ✔
     - go to edit Profile ✔
@@ -42,13 +46,24 @@
 - Update Store with Trailer video data ✔
 - Embedded the youtube video and make it autoplay and mute ✔
 - TailwindCSS classes to make Main container look awesome ✔
-- Build secondary Component
-- Build Movie List
-- Build Movie card
-- TMDB Image CDN userSlice
-- Made the Browser page amazing with Tailwind CSS
-- usePopularMovies Custom Hook
+- Build secondary Component ✔
+- Build Movie List ✔
+- Build Movie card ✔
+- TMDB Image CDN userSlice ✔
+- Made the Browser page amazing with Tailwind CSS ✔
+- usePopularMovies Custom Hook ✔
 
+- netflix GPT part begin
+- create a GPT Search button inside header component ✔
+- Create GptSearch component - we have to use it inside our browse page ✔
+- create gptSlice.js file to toggle GptSearch button ✔
+- GPT search Bar ✔
+- Added multi language feature in that ✔
+- (BONUS) Multi-language Feature in our App ✔
+- platform.openai.com - we will have to login in that via same chatGPT Account
+- Go to > personal > view api key
+- we will have to generate new API key and than i'll have to use it as a variable OPENAI_KEY = "...." inside contant.js file
+- install openai package 
 
 
 # Features 

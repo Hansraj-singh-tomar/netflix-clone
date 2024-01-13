@@ -7,8 +7,9 @@ const SecondaryContainer = () => {
     const movies = useSelector((store) => store?.movies)
 
     return (
+        // This will start after the main component
         <div className='bg-black'>
-
+            {/* This will start from -mt-40 */}
             <div className='text-white pl-14 pr-5 relative -mt-40 z-20'>
                 <MovieList title="Now Playing" movies={movies?.nowPlayingMovies} />
                 <MovieList title="Trending" movies={movies?.nowPlayingMovies} />
