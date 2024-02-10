@@ -4,7 +4,9 @@ import React, { useEffect } from 'react'
 import { NETFLIX_LOGO, SUPPORTED_LANGUAGES } from '../utils/constants';
 
 // Firebase
-import { auth } from '../utils/firebase'
+import { auth } from '../utils/firebase';
+
+
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
 // react-router-dom
@@ -75,18 +77,21 @@ const Header = ({ isSignInForm, setIsSignInForm }) => {
                 user ?
                     <div className='flex items-center'>
                         {
-                            showGptSearch &&
-                            <>
-                                <select onChange={handleSelectOption} className='text-white bg-gray-700 font-semibold px-2 h-9 rounded-[5px] mr-3 border-none'>
-                                    {
-                                        SUPPORTED_LANGUAGES.map((lang) => <option key={lang.identifier} value={lang.identifier} name={lang.identifier} className='text-black bg-white'>{lang.name}</option>)
-                                    }
-                                </select>
-                            </>
+                            showGptSearch ?
+                                <>
+                                    <select onChange={handleSelectOption} className='text-white bg-gray-700 font-semibold px-2 h-9 rounded-[5px] mr-3 border-none'>
+                                        {
+                                            SUPPORTED_LANGUAGES.map((lang) => <option key={lang.identifier} value={lang.identifier} name={lang.identifier} className='text-black bg-white'>{lang.name}</option>)
+                                        }
+                                    </select>
+                                    <button onClick={handleGptSearch} className='text-white bg-purple-400 font-bold px-3 h-9 rounded-[5px] mr-3'>{showGptSearch ? "Home Page" : "GPT Search"}</button>
+                                </> :
+                                <>
+                                    <button onClick={handleGptSearch} className='text-white bg-purple-400 font-bold px-3 h-9 rounded-[5px] mr-3'>{showGptSearch ? "Home Page" : "GPT Search"}</button>
+                                    <img className='w-9 h-9 rounded-sm object-contain' src={user.photoURL} alt="img" />
+                                    <button onClick={handleSignOut} className='text-white bg-blue-600 font-bold px-3 h-9 rounded-[5px] ml-2'>Sign Out</button>
+                                </>
                         }
-                        <button onClick={handleGptSearch} className='text-white bg-purple-400 font-bold px-3 h-9 rounded-[5px] mr-3'>{showGptSearch ? "Home Page" : "GPT Search"}</button>
-                        <img className='w-9 h-9 rounded-sm object-contain' src={user.photoURL} alt="img" />
-                        <button onClick={handleSignOut} className='text-white bg-blue-600 font-bold px-3 h-9 rounded-[5px] ml-2'>Sign Out</button>
                     </div>
                     :
                     !isSignInForm && <button onClick={() => setIsSignInForm(true)} className='text-white bg-red-600 font-bold px-3 h-9 rounded-[5px]'>Sign In</button>

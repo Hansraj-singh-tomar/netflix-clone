@@ -9,7 +9,7 @@ import { USER_IMG, BG_IMG } from '../utils/constants';
 import { checkValidData } from '../utils/validate';
 
 // Firebase 
-import { auth } from "../utils/firebase";
+import { auth } from '../utils/firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 // Redux-Toolkit
@@ -27,7 +27,7 @@ const Login = () => {
 
     const dispatch = useDispatch();
 
-    function handleBtnClick(e) {
+    async function handleBtnClick(e) {
         e.preventDefault();
 
         const error = checkValidData(email.current.value, password.current.value)

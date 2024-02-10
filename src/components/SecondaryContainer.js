@@ -12,8 +12,9 @@ const SecondaryContainer = () => {
             {/* This will start from -mt-40 */}
             <div className='text-white pl-14 pr-5 relative -mt-40 z-20'>
                 <MovieList title="Now Playing" movies={movies?.nowPlayingMovies} />
-                <MovieList title="Trending" movies={movies?.nowPlayingMovies} />
-                <MovieList title="Hrror" movies={movies?.nowPlayingMovies} />
+                <MovieList title="Popular" movies={movies?.popularMovies} />
+                <MovieList title="Top Rated" movies={movies?.topRatedMovies} />
+                <MovieList title="Upcoming Movies" movies={movies?.upComingMovies} />
             </div>
         </div>
     )

@@ -17,3 +17,5 @@ const userSlice = createSlice({
 
 export default userSlice.reducer;
 export const { addUser, removeUser } = userSlice.actions;
+
+// https://e-dashboard-backend-otm3.onrender.com/register

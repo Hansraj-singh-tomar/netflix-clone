@@ -60,10 +60,11 @@
 - GPT search Bar ✔
 - Added multi language feature in that ✔
 - (BONUS) Multi-language Feature in our App ✔
-- platform.openai.com - we will have to login in that via same chatGPT Account
-- Go to > personal > view api key
-- we will have to generate new API key and than i'll have to use it as a variable OPENAI_KEY = "...." inside contant.js file
-- install openai package 
+- platform.openai.com - we will have to login in that via same chatGPT Account ✔
+- Go to > personal > view api key ✔
+- we will have to generate new API key and than i'll have to use it as a variable OPENAI_KEY = "..." inside contant.js file ✔
+- install openai package ✔
+
 
 
 # Features 
