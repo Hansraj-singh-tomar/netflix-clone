@@ -71,25 +71,25 @@ const Header = ({ isSignInForm, setIsSignInForm }) => {
     }
 
     return (
-        <div className="absolute z-50 w-full px-8 py-4 bg-gradient-to-b from-black flex justify-between items-center">
-            <img className='w-40 h-16 object-cover' src={NETFLIX_LOGO} alt="logo" />
+        <div className="absolute z-50 w-full px-8 py-4 bg-gradient-to-b from-black flex flex-col md:flex-row lg:flex-row justify-between items-center">
+            <img className='w-28 md:w-40 h-8 md:h-16 object-cover' src={NETFLIX_LOGO} alt="logo" />
             {
                 user ?
-                    <div className='flex items-center'>
+                    <div className='flex items-center mt-2 md:mt-0'>
                         {
                             showGptSearch ?
                                 <>
-                                    <select onChange={handleSelectOption} className='text-white bg-gray-700 font-semibold px-2 h-9 rounded-[5px] mr-3 border-none'>
+                                    <select onChange={handleSelectOption} className='text-white bg-gray-700 font-semibold px-2 py-1 md:h-9 rounded-[5px] mr-3 border-none'>
                                         {
                                             SUPPORTED_LANGUAGES.map((lang) => <option key={lang.identifier} value={lang.identifier} name={lang.identifier} className='text-black bg-white'>{lang.name}</option>)
                                         }
                                     </select>
-                                    <button onClick={handleGptSearch} className='text-white bg-purple-400 font-bold px-3 h-9 rounded-[5px] mr-3'>{showGptSearch ? "Home Page" : "GPT Search"}</button>
+                                    <button onClick={handleGptSearch} className='text-white bg-purple-400 font-semibold md:font-bold px-2 md:px-3 md:h-9 rounded-[5px] mr-3'>{showGptSearch ? "Home Page" : "GPT Search"}</button>
                                 </> :
                                 <>
-                                    <button onClick={handleGptSearch} className='text-white bg-purple-400 font-bold px-3 h-9 rounded-[5px] mr-3'>{showGptSearch ? "Home Page" : "GPT Search"}</button>
-                                    <img className='w-9 h-9 rounded-sm object-contain' src={user.photoURL} alt="img" />
-                                    <button onClick={handleSignOut} className='text-white bg-blue-600 font-bold px-3 h-9 rounded-[5px] ml-2'>Sign Out</button>
+                                    <button onClick={handleGptSearch} className='text-white bg-purple-400 font-normal md:font-bold px-2 md:px-3 h-6 md:h-9 rounded-[5px] mr-3'>{showGptSearch ? "Home Page" : "GPT Search"}</button>
+                                    <img className='w-9 h-6 md:h-9 rounded-sm object-contain' src={user.photoURL} alt="img" />
+                                    <button onClick={handleSignOut} className='text-white bg-blue-600 font-normal md:font-bold px-2 md:px-3 h-6 md:h-9 rounded-[5px] ml-2'>Sign Out</button>
                                 </>
                         }
                     </div>

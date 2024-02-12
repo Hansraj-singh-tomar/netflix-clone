@@ -21,15 +21,15 @@ const MovieList = ({ title, movies }) => {
 
     return (
         <div className='pb-6 w-full relative'>
-            <h1 className='text-bold text-lg'>{title}</h1>
+            <h1 className='font-bold text-sm md:text-lg mb-1'>{title}</h1>
             <div ref={boxRef} className='flex w-full overflow-hidden transition ease-out duration-400 scroll-smooth'>
                 {
                     movies?.map((movie) => <MovieCard key={movie?.id} posterPath={movie?.poster_path} />)
                 }
             </div>
             <div className='absolute top-0 h-full w-full flex justify-between items-center text-3xl'>
-                <button onClick={prevSlide} className='p-1 bg-gray-600 text-white h-10 rounded-full text-center'><FaChevronLeft /></button>
-                <button onClick={nextSlide} className='p-1 bg-gray-600 text-white h-10 rounded-full text-center'><FaChevronRight /></button>
+                <button onClick={prevSlide} className='p-1 bg-gray-600 text-white h-7 md:h-10 rounded-full text-center'><FaChevronLeft className='text-lg md:text-auto' /></button>
+                <button onClick={nextSlide} className='p-1 bg-gray-600 text-white h-7 md:h-10 rounded-full text-center'><FaChevronRight className='text-lg md:text-auto' /></button>
             </div>
         </div>
     )

@@ -10,7 +10,7 @@ const SecondaryContainer = () => {
         // This will start after the main component
         <div className='bg-black'>
             {/* This will start from -mt-40 */}
-            <div className='text-white pl-14 pr-5 relative -mt-40 z-20'>
+            <div className='text-white pl-5 md:pl-14 md:pr-5 relative mt-0 lg:-mt-40 z-20'>
                 <MovieList title="Now Playing" movies={movies?.nowPlayingMovies} />
                 <MovieList title="Popular" movies={movies?.popularMovies} />
                 <MovieList title="Top Rated" movies={movies?.topRatedMovies} />

@@ -84,9 +84,10 @@ const Login = () => {
         <div className='relative'>
             <Header isSignInForm={isSignInForm} setIsSignInForm={setIsSignInForm} />
             <div className='absolute top-0 left-0 h-screen'>
-                <img className='w-screen aspect-video object-cover' src={BG_IMG} alt="bg-img" />
+                <img className='w-screen h-screen aspect-video object-cover' src={BG_IMG} alt="bg-img" />
             </div>
-            <form className='relative top-28 w-4/12 mx-auto text-white bg-black py-15 p-10 rounded-lg bg-opacity-80'>
+
+            <form className='relative top-60 md:top-72 lg:top-28 w-11/12 md:w-7/12 lg:w-4/12 mx-auto text-white bg-black py-15 p-10 rounded-lg bg-opacity-80'>
                 <h1 className='py-8 text-3xl font-semibold'>{isSignInForm ? "Sign In" : "Sign Up"}</h1>
                 {
                     errorMessage &&
